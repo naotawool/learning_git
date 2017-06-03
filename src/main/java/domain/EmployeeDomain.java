@@ -1,5 +1,8 @@
 package domain;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import entity.Employee;
 import valueobject.EmployeeNo;
 
@@ -9,6 +12,8 @@ import valueobject.EmployeeNo;
  * @author naotake
  */
 public class EmployeeDomain {
+
+    private Logger log = LoggerFactory.getLogger(EmployeeDomain.class);
 
     private Employee entity;
 
@@ -26,7 +31,7 @@ public class EmployeeDomain {
      * 挨拶をします。
      */
     public void sayGreeting() {
-        System.out.println(String.format("「%s」", entity.getComment()));
+        log.info("「{}」", entity.getComment());
     }
 
     public Employee getEntity() {
