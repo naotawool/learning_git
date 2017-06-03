@@ -6,6 +6,6 @@ node {
     // ビルド
     stage 'Build'
         timestamps {
-            bat 'gradlew.bat clean build'
+            bat 'gradlew.bat clean build --info'
         }
 }
