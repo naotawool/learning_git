@@ -1,7 +1,7 @@
 node {
     // Git から Clone
     stage 'Clone'
-        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/naotawool/learning_git.git']]]
+        git(url: 'https://github.com/naotawool/learning_git.git', branch: 'develop', poll: true)
 
     // ビルド
     stage 'Build'
